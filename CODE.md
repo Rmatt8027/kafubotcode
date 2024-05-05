@@ -49,14 +49,14 @@ async def update(ctx):
 async def on_interaction(interaction: discord.Interaction):
     try:
         if interaction.data["component_type"] == 2:
-            if interaction.data["custom_od"] == "ver1_2":
-                await interaction.response.send.message("Ver.1.2 Changelog: Changelogの追加", ephemeral=Ture)
-            if interaction.data["custom_od"] == "ver1_1":
-                await interaction.response.send.message("Ver.1.1 Changelog: !bedwars, !rearth, !minemanコマンドの追加(バグ修正)", ephemeral=Ture)
+            if interaction.data["custom_id"] == "ver1_2":
+                await interaction.response.send.message("Ver.1.2 Changelog: Changelogの追加", ephemeral=True)
+            if interaction.data["custom_id"] == "ver1_1":
+                await interaction.response.send.message("Ver.1.1 Changelog: !bedwars, !rearth, !minemanコマンドの追加(バグ修正)", ephemeral=True)
             if interaction.data["custom_id"] == "ver1_0":
-                await interaction.response.send.message("Ver.1.0 Changelog: !bwコマンドの追加(バグ多数)", ephemeral=Ture)
+                await interaction.response.send.message("Ver.1.0 Changelog: !bwコマンドの追加(バグ多数)", ephemeral=True)
     except KeyError:
         pass
 
 
-bot.run("MY TOKEN")
+bot.run("TOKEN")
